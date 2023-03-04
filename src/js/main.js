@@ -1,13 +1,15 @@
 async function loadScores() {
   const response = await fetch('../data.json');
   const data = await response.json();
-  console.table(data);
   renderScores(data);
 }
 
 function renderScores(scores) {
   const list = document.querySelector('#js-scores');
+  const overall = document.querySelector('#js-overall');
+
   let template = '';
+  let total = 0;
 
   for (const item of scores) {
     template += `
@@ -18,8 +20,12 @@ function renderScores(scores) {
       </div>
       <div class="scores__individual"><span class="scores__individual--dark">${item.score}</span> / 100</div>
     </li>`;
+    total += item.score;
   }
+
+  total = Math.round(total / scores.length);
   list.innerHTML = template;
+  overall.innerHTML = total;
 }
 
 loadScores();
