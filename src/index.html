@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png" />
+
+    <title>Frontend Mentor | Results summary component</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1 class="header__title">Your Result</h1>
+        <section class="result">
+          <h2 class="result__total">76</h2>
+          <p class="result__out-of">of 100</p>
+        </section>
+        <section class="average">
+          <h3 class="average__title">Great</h3>
+          <p class="average__content">You scored higher than 65% of the people who have taken these tests.</p>
+        </section>
+      </header>
+      <main class="main">
+        <section class="scores">
+          <h3 class="scores__title">Summary</h3>
+          <ul class="scores__list" id="js-scores">
+            <!-- Scores will be loaded using JavaScript here -->
+          </ul>
+          <button type="button" class="btn-continue">Continue</button>
+        </section>
+      </main>
+    </div>
+    <footer class="attribution">
+      <p>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="https://github.com/deejayjay">DeeJayJay</a>.</p>
+    </footer>
+    <script src="js/main.js"></script>
+  </body>
+</html>
